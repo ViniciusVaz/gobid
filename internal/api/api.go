@@ -2,6 +2,7 @@ package api
 
 import (
 	"github.com/ViniciusVaz/gobid/internal/services"
+	"github.com/alexedwards/scs/v2"
 
 	"github.com/go-chi/chi/v5"
 )
@@ -9,4 +10,5 @@ import (
 type Api struct {
 	Router      *chi.Mux
 	UserService services.UserService
+	Sessions    *scs.SessionManager
 }
